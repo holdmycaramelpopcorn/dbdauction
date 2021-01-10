@@ -39,7 +39,5 @@ class Bidder(models.Model):
     user_name = models.ForeignKey(User, on_delete=models.CASCADE)
     product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
     bid_amount = models.CharField(max_length=255, validators=[numeric])
-
-
         
 

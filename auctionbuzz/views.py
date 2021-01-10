@@ -196,5 +196,6 @@ def save_bid(request):
             if not a:
                 obj = Bidder(user_name=request.user, product_id=Product.objects.get(id=request.POST.get('product_id')), bid_amount=int(request.POST.get('bid_amount')))
                 obj.save()
+                obj.save(using="desc_db")
             return HttpResponseRedirect(reverse('view_product'))
     return render(request, 'auction_system/product_detail.html', context)

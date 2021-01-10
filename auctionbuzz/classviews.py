@@ -30,6 +30,7 @@ class AddProductView(CreateView):
     def form_valid(self, form):
         obj = Seller(user_name = self.request.user, product_id = form.save())
         obj.save()
+        obj.save(using="desc_db")
         return super(AddProductView, self).form_valid(form)
 
     def get_success_url(self):

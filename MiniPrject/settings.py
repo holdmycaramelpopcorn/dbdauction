@@ -82,6 +82,10 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'instaisapain',
         'HOST': 'localhost'
+    },
+    'desc_db': {
+        'ENGINE': 'djongo',
+        'NAME': 'desc_db',
     }
 }
 
